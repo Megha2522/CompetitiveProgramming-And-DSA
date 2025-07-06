@@ -2,7 +2,6 @@
 
 ## recursion
 ```c++
-// function Template for C++
 
 class Solution {
   public:
@@ -19,6 +18,29 @@ class Solution {
     queue<int> reverseQueue(queue<int> &q) {
         
         reverse(q);
+        return q;
+    }
+};
+```
+
+## using stack
+```c++
+
+class Solution {
+  public:
+    queue<int> reverseQueue(queue<int> &q) {
+        
+        stack<int> s;
+        
+        while(!q.empty()) {
+            int a = q.front();
+            q.pop();
+            s.push(a);
+        }
+        while(!s.empty()) {
+            q.push(s.top());
+            s.pop();
+        }
         return q;
     }
 };
