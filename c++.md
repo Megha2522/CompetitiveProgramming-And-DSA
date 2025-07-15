@@ -54,3 +54,7 @@ myVector[0] = 25;
 
 # SORT
 sort(myVector.begin(), myVector.end());
+
+# STRING
+
+to_string() // converts any datatype to string
