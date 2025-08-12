@@ -35,7 +35,7 @@ class Solution2 {
             if(s[i]=='(') l++;
             else r++;
             if(l==r) answer = max(answer,2*l);
-            else if(r>l) l=r=0;
+            else if(r>l) l=r=0; //invalid
         }
         
         l = r = 0;
